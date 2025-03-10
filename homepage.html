@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Boost Personal Productivity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+    }
+    .gradient-bg-secondary {
+      background: linear-gradient(135deg, #f6d365, #fda085);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .landscape-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">MSRISKTEC</div>
+      <nav class="space-x-4">
+        <a class="hover:text-gray-300" href="#">HOME</a>
+        <a class="hover:text-gray-300" href="#">ABOUT US</a>
+        <a class="hover:text-gray-300" href="#">SERVICES</a>
+        <a class="hover:text-gray-300" href="#">PRICING</a>
+        <a class="hover:text-gray-300" href="#">WORK</a>
+        <a class="hover:text-gray-300" href="#">BLOG</a>
+        <a class="hover:text-gray-300" href="#">CONTACT US</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-12">
+    <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between">
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h1 class="text-5xl font-bold mb-4">Expert protection. <br>Tailored solutions.</h1>
+        <p class="text-lg mb-8">
+            Reddawn provides industry leading and comprehensive corporate, commercial, and bespoke Security and Risk Management Solutions.
+        </p>
+        <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
+          <a class="gradient-bg-secondary hover:opacity-90 text-white font-bold py-3 px-6 rounded-full" href="#">
+            Start A Project
+          </a>
+          <a class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-6 rounded-full" href="tel:+012345678910">
+            Call us for any inquiry +01 2345 6789 10
+          </a>
+        </div>
+      </div>
+      <div class="lg:w-1/2 mt-8 lg:mt-0">
+        <img
+          alt="Illustration of people working on productivity charts"
+          class="landscape-image shadow-2xl"
+          src="https://storage.googleapis.com/a1aa/image/xtllLmuWI_LYmPcl324D8tKzINQribGwvuI15rP_MhY.jpg"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-4">We Provide A Lot of Cool Services</h2>
+      <p class="text-lg text-center mb-8">
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Marketing -->
+        <div class="bg-white shadow-lg rounded-lg p-6 card-hover">
+          <img
+            alt="Marketing icon"
+            class="mx-auto mb-4"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/VjtWBugMRvU8x95u5IYoh3ZVO3XAa7NOnQtxbuGyS8U.jpg"
+            width="100"
+          />
+          <h3 class="text-xl font-bold mb-2">Marketing</h3>
+          <p class="text-gray-600">
+            Even the all-powerful Pointing has no control about the blind texts.
+          </p>
+        </div>
+        <!-- SEO -->
+        <div class="bg-white shadow-lg rounded-lg p-6 card-hover">
+          <img
+            alt="SEO icon"
+            class="mx-auto mb-4"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/Xvw9PJpOkmVkFejn7J5s__dk6S58BBiTb4_Tzw6zWak.jpg"
+            width="100"
+          />
+          <h3 class="text-xl font-bold mb-2">SEO</h3>
+          <p class="text-gray-600">
+            Even the all-powerful Pointing has no control about the blind texts.
+          </p>
+        </div>
+        <!-- UI/UX Design -->
+        <div class="bg-white shadow-lg rounded-lg p-6 card-hover">
+          <img
+            alt="UI/UX Design icon"
+            class="mx-auto mb-4"
+            height="100"
+            src="https://storage.googleapis.com/a1aa/image/fcA67MyehAZoGc8EUqRn2YIMcb663bbHi9-fVt7mpYo.jpg"
+            width="100"
+          />
+          <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+          <p class="text-gray-600">
+            Even the all-powerful Pointing has no control about the blind texts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a class="hover:text-gray-400" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="hover:text-gray-400" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="hover:text-gray-400" href="#"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+      <p>© 2023 Unbrew. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

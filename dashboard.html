@@ -1,338 +1,353 @@
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Dashboard
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
- </head>
- <body class="bg-gray-900 text-white font-sans">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
   <div class="flex h-screen">
-   <!-- Sidebar -->
-   <div class="w-64 bg-gray-800 p-4">
-    <div class="flex items-center mb-6">
-     <img alt="Logo" class="w-10 h-10 mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/X3h3zqorK9ST50ouXQsJECYtXBFChZWjxnqPqI7Iz6s.jpg" width="40"/>
-     <span class="text-xl font-bold">
-      GuardPro
-     </span>
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-800 p-4">
+      <div class="flex items-center mb-6">
+        <img alt="Logo" class="w-10 h-10 mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/X3h3zqorK9ST50ouXQsJECYtXBFChZWjxnqPqI7Iz6s.jpg" width="40"/>
+        <span class="text-xl font-bold">GuardPro</span>
+      </div>
+      <div class="mb-4">
+        <input class="w-full p-2 bg-gray-700 rounded text-gray-300" placeholder="Search" type="text"/>
+      </div>
+      <nav>
+        <ul>
+          <li class="mb-2">
+            <a class="flex items-center p-2 bg-blue-600 rounded" href="#">
+              <i class="fas fa-chart-line mr-2"></i> Insights
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-chart-pie mr-2"></i> Analytics
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-folder-open mr-2"></i> Resource
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-shield-alt mr-2"></i> Trust
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-users mr-2"></i> Relationships
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-briefcase mr-2"></i> Business Explore
+              <span class="ml-2 text-purple-500">BETA</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mt-auto">
+        <ul>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-cog mr-2"></i> Setting
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
+              <i class="fas fa-question-circle mr-2"></i> Help Center
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="mb-4">
-     <input class="w-full p-2 bg-gray-700 rounded text-gray-300" placeholder="Search" type="text"/>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+      <header class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold">Insights</h1>
+        <div class="flex items-center">
+          <div class="mr-4">
+            <span class="text-gray-400">Nov 21 - Nov 31</span>
+          </div>
+          <button class="bg-gray-700 p-2 rounded mr-2">
+            <i class="fas fa-filter"></i> Filter
+          </button>
+          <button class="bg-gray-700 p-2 rounded">
+            <i class="fas fa-file-export"></i> Export
+          </button>
+        </div>
+      </header>
+
+      <!-- Cards Section -->
+      <div class="flex space-x-4 mb-6">
+        <!-- Relationships Card -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Relationships</span>
+            <span class="text-gray-400 text-sm">Last update at 21 Nov</span>
+          </div>
+          <div class="flex items-center">
+            <canvas id="relationshipsChart" class="w-24 h-12 mr-4"></canvas>
+            <div>
+              <span class="text-2xl font-bold">852</span>
+              <span class="text-green-500 ml-2">+18%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Average Risk Card -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Average Risk</span>
+            <span class="text-gray-400 text-sm">Last update at 18 Nov</span>
+          </div>
+          <div class="flex items-center">
+            <canvas id="averageRiskChart" class="w-24 h-12 mr-4"></canvas>
+            <div>
+              <span class="text-2xl font-bold">42%</span>
+              <span class="text-red-500 ml-2">-10%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Average Coverage Card -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Average Coverage</span>
+            <span class="text-gray-400 text-sm">Last update at 16 Nov</span>
+          </div>
+          <div class="flex items-center">
+            <canvas id="averageCoverageChart" class="w-24 h-12 mr-4"></canvas>
+            <div>
+              <span class="text-2xl font-bold">94%</span>
+              <span class="text-green-500 ml-2">+27%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphs Section -->
+      <div class="flex space-x-4 mb-6">
+        <!-- Average Risk Over Time -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Average risk over time</span>
+            <select class="bg-gray-700 p-1 rounded text-gray-400">
+              <option>Monthly</option>
+            </select>
+          </div>
+          <canvas id="riskOverTimeChart" class="w-full h-40"></canvas>
+        </div>
+
+        <!-- Relationships by Content Type -->
+        <div class="w-1/3 space-y-4">
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="flex justify-between items-center mb-2">
+              <span>Relationships by content type</span>
+              <span class="text-gray-400 text-sm">Nov 2023</span>
+            </div>
+            <canvas id="contentTypeChart" class="w-full h-40"></canvas>
+          </div>
+
+          <!-- Risk by Business Unit -->
+          <div class="bg-gray-800 p-4 rounded">
+            <div class="flex justify-between items-center mb-2">
+              <span>Risk by business unit</span>
+              <span class="text-gray-400 text-sm">Last update at 3 Nov</span>
+            </div>
+            <canvas id="businessUnitChart" class="w-full h-24"></canvas>
+            <div class="flex justify-between items-center mt-2">
+              <span class="text-blue-500">Customer Service</span>
+              <span class="text-green-500">Engineering</span>
+              <span class="text-yellow-500">Product</span>
+              <span class="text-purple-500">Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Graphs Section -->
+      <div class="flex space-x-4">
+        <!-- Relationships by Risk -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Relationships by risk</span>
+            <span class="text-gray-400 text-sm">Last update at 3 Nov</span>
+          </div>
+          <canvas id="riskChart" class="w-full h-40"></canvas>
+        </div>
+
+        <!-- Relationships by Data Type -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Relationships by data type</span>
+            <select class="bg-gray-700 p-1 rounded text-gray-400">
+              <option>Monthly</option>
+            </select>
+          </div>
+          <canvas id="dataTypeChart" class="w-full h-40"></canvas>
+        </div>
+      </div>
+
+      <!-- Additional Graphs Section -->
+      <div class="flex space-x-4 mt-6">
+        <!-- Line Chart -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Monthly Performance</span>
+            <span class="text-gray-400 text-sm">Last update at 3 Nov</span>
+          </div>
+          <canvas id="lineChart" class="w-full h-40"></canvas>
+        </div>
+
+        <!-- Doughnut Chart -->
+        <div class="flex-1 bg-gray-800 p-4 rounded">
+          <div class="flex justify-between items-center mb-2">
+            <span>Risk Distribution</span>
+            <span class="text-gray-400 text-sm">Last update at 3 Nov</span>
+          </div>
+          <canvas id="doughnutChart" class="w-full h-40"></canvas>
+        </div>
+      </div>
     </div>
-    <nav>
-     <ul>
-      <li class="mb-2">
-       <a class="flex items-center p-2 bg-blue-600 rounded" href="#">
-        <i class="fas fa-chart-line mr-2">
-        </i>
-        Insights
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-chart-pie mr-2">
-        </i>
-        Analytics
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-folder-open mr-2">
-        </i>
-        Resource
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-shield-alt mr-2">
-        </i>
-        Trust
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-users mr-2">
-        </i>
-        Relationships
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-briefcase mr-2">
-        </i>
-        Business Explore
-        <span class="ml-2 text-purple-500">
-         BETA
-        </span>
-       </a>
-      </li>
-     </ul>
-    </nav>
-    <div class="mt-auto">
-     <ul>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-cog mr-2">
-        </i>
-        Setting
-       </a>
-      </li>
-      <li class="mb-2">
-       <a class="flex items-center p-2 hover:bg-gray-700 rounded" href="#">
-        <i class="fas fa-question-circle mr-2">
-        </i>
-        Help Center
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
-   <!-- Main Content -->
-   <div class="flex-1 p-6">
-    <header class="flex justify-between items-center mb-6">
-     <h1 class="text-2xl font-bold">
-      Insights
-     </h1>
-     <div class="flex items-center">
-      <div class="mr-4">
-       <span class="text-gray-400">
-        Nov 21 - Nov 31
-       </span>
-      </div>
-      <button class="bg-gray-700 p-2 rounded mr-2">
-       <i class="fas fa-filter">
-       </i>
-       Filter
-      </button>
-      <button class="bg-gray-700 p-2 rounded">
-       <i class="fas fa-file-export">
-       </i>
-       Export
-      </button>
-     </div>
-    </header>
-    <div class="flex space-x-4 mb-6">
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Relationships
-       </span>
-       <span class="text-gray-400 text-sm">
-        Last update at 21 Nov
-       </span>
-      </div>
-      <div class="flex items-center">
-       <img alt="Graph" class="w-24 h-12 mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/IN-fjMNydYhN5hQAV2xq2IO_zIN--5zhltoFnlKXkjA.jpg" width="100"/>
-       <div>
-        <span class="text-2xl font-bold">
-         852
-        </span>
-        <span class="text-green-500 ml-2">
-         +18%
-        </span>
-       </div>
-      </div>
-     </div>
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Average Risk
-       </span>
-       <span class="text-gray-400 text-sm">
-        Last update at 18 Nov
-       </span>
-      </div>
-      <div class="flex items-center">
-       <img alt="Graph" class="w-24 h-12 mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/IN-fjMNydYhN5hQAV2xq2IO_zIN--5zhltoFnlKXkjA.jpg" width="100"/>
-       <div>
-        <span class="text-2xl font-bold">
-         42%
-        </span>
-        <span class="text-red-500 ml-2">
-         -10%
-        </span>
-       </div>
-      </div>
-     </div>
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Average Coverage
-       </span>
-       <span class="text-gray-400 text-sm">
-        Last update at 16 Nov
-       </span>
-      </div>
-      <div class="flex items-center">
-       <img alt="Graph" class="w-24 h-12 mr-4" height="50" src="https://storage.googleapis.com/a1aa/image/IN-fjMNydYhN5hQAV2xq2IO_zIN--5zhltoFnlKXkjA.jpg" width="100"/>
-       <div>
-        <span class="text-2xl font-bold">
-         94%
-        </span>
-        <span class="text-green-500 ml-2">
-         +27%
-        </span>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="flex space-x-4 mb-6">
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Average risk over time
-       </span>
-       <select class="bg-gray-700 p-1 rounded text-gray-400">
-        <option>
-         Monthly
-        </option>
-       </select>
-      </div>
-      <img alt="Bar Chart" class="w-full h-40" height="200" src="https://storage.googleapis.com/a1aa/image/W2ossPw6vP0seXVXrl2OTrAMXXkLMk9DV2GW4VyYouY.jpg" width="400"/>
-     </div>
-     <div class="w-1/3 space-y-4">
-      <div class="bg-gray-800 p-4 rounded">
-       <div class="flex justify-between items-center mb-2">
-        <span>
-         Relationships by content type
-        </span>
-        <span class="text-gray-400 text-sm">
-         Nov 2023
-        </span>
-       </div>
-       <div class="space-y-2">
-        <div class="flex justify-between items-center">
-         <span>
-          Personal Access
-         </span>
-         <span class="text-gray-400 text-sm">
-          50% Rate
-         </span>
-        </div>
-        <div class="w-full bg-gray-700 h-2 rounded">
-         <div class="bg-purple-500 h-2 rounded" style="width: 50%;">
-         </div>
-        </div>
-        <div class="flex justify-between items-center">
-         <span>
-          On-site Services
-         </span>
-         <span class="text-gray-400 text-sm">
-          80% Rate
-         </span>
-        </div>
-        <div class="w-full bg-gray-700 h-2 rounded">
-         <div class="bg-blue-500 h-2 rounded" style="width: 80%;">
-         </div>
-        </div>
-        <div class="flex justify-between items-center">
-         <span>
-          Network Connected
-         </span>
-         <span class="text-gray-400 text-sm">
-          32% Rate
-         </span>
-        </div>
-        <div class="w-full bg-gray-700 h-2 rounded">
-         <div class="bg-green-500 h-2 rounded" style="width: 32%;">
-         </div>
-        </div>
-       </div>
-      </div>
-      <div class="bg-gray-800 p-4 rounded">
-       <div class="flex justify-between items-center mb-2">
-        <span>
-         Risk by business unit
-        </span>
-        <span class="text-gray-400 text-sm">
-         Last update at 3 Nov
-        </span>
-       </div>
-       <img alt="Pie Chart" class="w-full h-24" height="100" src="https://storage.googleapis.com/a1aa/image/IuaYDV_bI29t6uNWUYzk2Z7Z_ylWQtDuuW9hyRbUnwE.jpg" width="100"/>
-       <div class="flex justify-between items-center mt-2">
-        <span class="text-blue-500">
-         Customer Service
-        </span>
-        <span class="text-green-500">
-         Engineering
-        </span>
-        <span class="text-yellow-500">
-         Product
-        </span>
-        <span class="text-purple-500">
-         Marketing
-        </span>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="flex space-x-4">
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Relationships by risk
-       </span>
-       <span class="text-gray-400 text-sm">
-        Last update at 3 Nov
-       </span>
-      </div>
-      <div class="space-y-2">
-       <div class="flex justify-between items-center">
-        <span>
-         Extreme
-        </span>
-        <span class="text-gray-400 text-sm">
-         30% Rate
-        </span>
-       </div>
-       <div class="w-full bg-gray-700 h-2 rounded">
-        <div class="bg-purple-500 h-2 rounded" style="width: 30%;">
-        </div>
-       </div>
-       <div class="flex justify-between items-center">
-        <span>
-         High
-        </span>
-        <span class="text-gray-400 text-sm">
-         50% Rate
-        </span>
-       </div>
-       <div class="w-full bg-gray-700 h-2 rounded">
-        <div class="bg-yellow-500 h-2 rounded" style="width: 50%;">
-        </div>
-       </div>
-       <div class="flex justify-between items-center">
-        <span>
-         Medium
-        </span>
-        <span class="text-gray-400 text-sm">
-         50% Rate
-        </span>
-       </div>
-       <div class="w-full bg-gray-700 h-2 rounded">
-        <div class="bg-blue-500 h-2 rounded" style="width: 50%;">
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="flex-1 bg-gray-800 p-4 rounded">
-      <div class="flex justify-between items-center mb-2">
-       <span>
-        Relationships by data type
-       </span>
-       <select class="bg-gray-700 p-1 rounded text-gray-400">
-        <option>
-         Monthly
-        </option>
-       </select>
-      </div>
-      <img alt="Bar Chart" class="w-full h-40" height="200" src="https://storage.googleapis.com/a1aa/image/W2ossPw6vP0seXVXrl2OTrAMXXkLMk9DV2GW4VyYouY.jpg" width="400"/>
-     </div>
-    </div>
-   </div>
   </div>
- </body>
+
+  <script>
+    // Initialize Charts
+    const relationshipsCtx = document.getElementById('relationshipsChart').getContext('2d');
+    const relationshipsChart = new Chart(relationshipsCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Relationships',
+          data: [700, 750, 800, 820, 850, 852],
+          borderColor: 'rgba(99, 102, 241, 1)',
+          borderWidth: 2,
+          fill: false,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+
+    const riskOverTimeCtx = document.getElementById('riskOverTimeChart').getContext('2d');
+    const riskOverTimeChart = new Chart(riskOverTimeCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Average Risk',
+          data: [50, 45, 42, 40, 38, 42],
+          backgroundColor: 'rgba(239, 68, 68, 0.8)',
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+
+    const contentTypeCtx = document.getElementById('contentTypeChart').getContext('2d');
+    const contentTypeChart = new Chart(contentTypeCtx, {
+      type: 'pie',
+      data: {
+        labels: ['Personal Access', 'On-site Services', 'Network Connected'],
+        datasets: [{
+          data: [50, 80, 32],
+          backgroundColor: ['rgba(99, 102, 241, 0.8)', 'rgba(59, 130, 246, 0.8)', 'rgba(34, 197, 94, 0.8)'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+
+    const businessUnitCtx = document.getElementById('businessUnitChart').getContext('2d');
+    const businessUnitChart = new Chart(businessUnitCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Customer Service', 'Engineering', 'Product', 'Marketing'],
+        datasets: [{
+          data: [30, 40, 20, 10],
+          backgroundColor: ['rgba(59, 130, 246, 0.8)', 'rgba(34, 197, 94, 0.8)', 'rgba(253, 224, 71, 0.8)', 'rgba(168, 85, 247, 0.8)'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+
+    const lineCtx = document.getElementById('lineChart').getContext('2d');
+    const lineChart = new Chart(lineCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Performance',
+          data: [60, 70, 80, 75, 85, 90],
+          borderColor: 'rgba(34, 197, 94, 1)',
+          borderWidth: 2,
+          fill: false,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+
+    const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+    const doughnutChart = new Chart(doughnutCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['High Risk', 'Medium Risk', 'Low Risk'],
+        datasets: [{
+          data: [30, 50, 20],
+          backgroundColor: ['rgba(239, 68, 68, 0.8)', 'rgba(253, 224, 71, 0.8)', 'rgba(34, 197, 94, 0.8)'],
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            enabled: true,
+          },
+        },
+      },
+    });
+  </script>
+</body>
 </html>
