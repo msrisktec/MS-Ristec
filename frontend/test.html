@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .metrics {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .metric {
+            text-align: center;
+            flex: 1;
+        }
+        .metric h2 {
+            margin: 0;
+        }
+        .status, .investment {
+            margin-top: 20px;
+        }
+        .status h3, .investment h3 {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>LOGO</h1>
+            <nav>
+                <a href="#">Summary</a>
+                <a href="#">Performance</a>
+                <a href="#">Strategy</a>
+                <a href="#">Activity</a>
+            </nav>
+        </div>
+
+        <div class="metrics">
+            <div class="metric">
+                <h2>Total Value</h2>
+                <p>$40,584</p>
+                <small>↑ $287 since last month</small>
+            </div>
+            <div class="metric">
+                <h2>Risk Score</h2>
+                <p>10</p>
+                <small>This is high risk for your age</small>
+            </div>
+            <div class="metric">
+                <h2>Contribution</h2>
+                <p>$976/mo</p>
+                <small>↑ $128 than average</small>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>Status</h3>
+            <p><strong>Performance:</strong> Meeting expected growth</p>
+            <p><strong>Diversity:</strong> Next rebalancing: May 1</p>
+            <p><strong>Fees:</strong> Reduce fees by leveraging other accounts</p>
+        </div>
+
+        <div class="investment">
+            <h3>Investment</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset Class</th>
+                        <th>Percentage</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>U.S. Large Stocks</td>
+                        <td>41%</td>
+                        <td>$16,300</td>
+                    </tr>
+                    <tr>
+                        <td>U.S. Mid/Small Stocks</td>
+                        <td>32%</td>
+                        <td>$12,800</td>
+                    </tr>
+                    <tr>
+                        <td>Vanguard Total Stock Market Index Fund</td>
+                        <td>29%</td>
+                        <td>$6,300</td>
+                    </tr>
+                    <tr>
+                        <td>Vanguard Total Stock Market Index Fund</td>
+                        <td>22%</td>
+                        <td>$2,500</td>
+                    </tr>
+                    <tr>
+                        <td>International Stocks</td>
+                        <td>22%</td>
+                        <td>$8,900</td>
+                    </tr>
+                    <tr>
+                        <td>Bonds</td>
+                        <td>5%</td>
+                        <td>$2,700</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td></td>
+                        <td><strong>$40,700</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
