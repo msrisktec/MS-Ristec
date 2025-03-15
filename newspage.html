@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management News Feed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        #news-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item h2 {
+            margin-top: 0;
+        }
+
+        .news-item p {
+            color: #555;
+        }
+
+        .news-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .news-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Risk Management News Feed</h1>
+    </header>
+    <main>
+        <div id="news-feed"></div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const apiKey = '7a979daa77fb46bc9d491ff9b756e497'; // Replace with your NewsAPI key
+            const newsFeed = document.getElementById('news-feed');
+
+            // Fetch news articles related to risk management
+            fetch(`https://newsapi.org/v2/everything?q=risk+management&apiKey=${apiKey}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.status === 'ok') {
+                        data.articles.forEach(article => {
+                            const newsItem = document.createElement('div');
+                            newsItem.classList.add('news-item');
+
+                            const title = document.createElement('h2');
+                            title.textContent = article.title;
+
+                            const description = document.createElement('p');
+                            description.textContent = article.description;
+
+                            const link = document.createElement('a');
+                            link.href = article.url;
+                            link.textContent = 'Read more';
+                            link.target = '_blank';
+
+                            newsItem.appendChild(title);
+                            newsItem.appendChild(description);
+                            newsItem.appendChild(link);
+
+                            newsFeed.appendChild(newsItem);
+                        });
+                    } else {
+                        console.error('API Error:', data);
+                        newsFeed.innerHTML = `<p>Failed to load news articles. Error: ${data.message || 'Unknown error'}</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching news:', error);
+                    newsFeed.innerHTML = '<p>Failed to load news articles. Please check your internet connection or API key.</p>';
+                });
+        });
+    </script>
+</body>
+</html>
