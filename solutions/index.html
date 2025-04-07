@@ -37,27 +37,48 @@
 }
     @keyframes fadeIn { to { opacity: 1; } }
   </style>
+    <style>
+      /* Google Translate Styling */
+      .goog-te-gadget-simple {
+        background: transparent !important; /* Override default white background */
+        border: 2px solid #ffffff !important; /* White border */
+        border-radius: 20px; /* Smaller pill shape */
+        padding: 2px 10px !important; /* Reduced height */
+        font-size: 20px !important; /* Smaller text */
+        height: 60px !important;
+      }
+      .goog-te-gadget {
+        height:36px !important;
+      }
+      #google_translate_element {
+        display: inline-block;
+      }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <header class="gradient-bg text-white shadow-lg py-6">
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div class="text-3xl font-bold">MS RiskTec</div>
       <nav class="space-x-6 text-lg">
-        <a class="hover:text-gray-300 transition" href="#">Home</a>
-        <a class="hover:text-gray-300 transition" href="#">Solutions</a>
-        <a class="hover:text-gray-300 transition" href="#">AI Tools</a>
-        <a class="hover:text-gray-300 transition" href="#">About Us</a>
-        <a class="hover:text-gray-300 transition" href="#">Contact</a>
+        <a class="hover:text-gray-300 transition" href="/index.html">Home</a>
+        <a class="hover:text-gray-300 transition" href="/solutions/">Solutions</a>
+        <a class="hover:text-gray-300 transition" href="/ai/">AI Tools</a>
+        <a class="hover:text-gray-300 transition" href="/training/">Training</a>
+        <a class="hover:text-gray-300 transition" href="/consultancy/">Consultancy</a>
+        <a class="hover:text-gray-300 transition" href="/research/">Research</a>
+        <a class="hover:text-gray-300 transition" href="/about/">About Us</a>
+        <a class="hover:text-gray-300 transition" href="/contact/">Contact</a>
       </nav>
+      <div class="flex justify-end px-6 pt-4">
+        <div id="google_translate_element"></div>
+      </div>
     </div>
   </header>
 
   <section class="gradient-bg text-white py-20 text-center fade-in">
-    <h1 class="text-6xl font-extrabold">Contact Us
-    </h1>
-    <p class="text-xl mt-4 max-w-2xl mx-auto"> We're here to assist you with AI-driven risk solutions. Connect with us today!
+    <h1 class="text-6xl font-extrabold">AI-Powered Risk Solutions</h1>
+    <p class="text-xl mt-4 max-w-2xl mx-auto">AI-Driven Risk Solutions for Future-Ready Organizations
     </p>
-    </h2>
     <div class="mt-6 flex justify-center gap-6"> <!-- Flex container for equal spacing -->
       <!-- Explore Our Tools Button -->
       <a class="bg-white text-gray-900 font-semibold py-4 px-8 rounded-full shadow-lg mt-6 inline-block hover:scale-105 transition-transform" href="#services">Explore Our Tools</a>
@@ -70,40 +91,45 @@
 
   <section class="py-20 bg-gray-100 text-center">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-8 text-gray-900">Let's Talk Risk!</h2>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
-        Have questions? Looking for AI-powered risk solutions? Let's connect!
+      <h2 class="text-4xl font-bold mb-6 text-gray-900">Who We Are</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        MS RiskTec Solutions is an industry leader in AI-powered risk management, risk consulting, research, and training. We integrate AI, data analytics, and deep industry expertise to provide next-gen risk intelligence solutions.
       </p>
-  
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <h3 class="text-3xl font-semibold mt-8 mb-6 text-gray-900"">Our Mission</h3>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+        To revolutionize risk management through AI, empowering organizations with predictive insights and strategic resilience.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-100" id="services">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Leadership & Experts:</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+               
         
-        <!-- Email Card -->
-        <div class="p-6 bg-white shadow-lg rounded-lg border-t-4 border-blue-600">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-          <p class="text-gray-700">contact@msrisktec.com</p>
-        </div>
+        <!-- Additional Cards -->
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="https://media.istockphoto.com/id/1361496588/photo/risk-level-indicator-rating-print-screen-wooden-cube-block-since-low-to-high-on-blue.jpg?s=612x612&w=0&k=20&c=QA3anw58ZP2ykC_iZDwVg1zm3Y6ZTwvRzDxv_cktdec=" class="mx-auto mb-4" alt="Risk Prediction">
+            <h3 class="text-2xl font-semibold mb-3">Mr. Manas Pandey – CEO, MS Risktec Solutions</h3>
+            <p class="text-gray-700">Manas Pandey is a seasoned business leader and AI-powered risk management consultant with 25+ years of experience in strategy, finance, energy, and healthtech. He holds an engineering degree, an MBA in finance, and a Data Science certification from Harvard.</p>
+          </div>
   
-        <!-- Phone Card -->
-        <div class="p-6 bg-white shadow-lg rounded-lg border-t-4 border-green-600">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-          <p class="text-gray-700">+123-456-7890</p>
-        </div>
+          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="https://media.istockphoto.com/id/1494104649/photo/ai-chatbot-artificial-intelligence-digital-concept.jpg?s=612x612&w=0&k=20&c=1Zq2sj3W0tWcpc-n1fVt4dQQOBGhtwcAk1H2eQ5MAbI=" class="mx-auto mb-4" alt="Chatbot">
+            <h3 class="text-2xl font-semibold mb-3">Dr. Sonjai Kumar, PhD, CFIRM – COO, MS Risktec Solutions</h3>
+            <p class="text-gray-700">Dr. Sonjai Kumar is a highly accomplished risk management expert with extensive experience in enterprise risk, governance, and compliance. He holds a PhD in Risk Management and is a Certified Fellow of the Institute of Risk Management (CFIRM, UK).</p>
+          </div>
   
-        <!-- Location Card -->
-        <div class="p-6 bg-white shadow-lg rounded-lg border-t-4 border-red-600">
-          <h3 class="text-xl font-semibold text-gray-900 mb-2">Our Office</h3>
-          <p class="text-gray-700">India</p>
-        </div>
-  
+          <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+            <img src="https://media.istockphoto.com/id/1387454800/vector/market-sentiment-fear-and-greed-index-emotional-on-stock-market-or-crypto-currency-trading.jpg?s=612x612&w=0&k=20&c=wN_k4TMNcH-4DQNBXNlor5ice3BlxqbzjOwbuUZzEYY=" class="mx-auto mb-4" alt="Sentiment Analysis">
+            <h3 class="text-2xl font-semibold mb-3">Mr. Adil Firoz</h3>
+            <p class="text-gray-700">AI sentiment analysis for tracking financial and cybersecurity risk trends.</p>
+          </div>
+        
       </div>
     </div>
   </section>
-  
-  
-  
-  
-
-  
   
   <style>
     .flip-card {
@@ -155,13 +181,10 @@
       display: grid;
       gap: 20px; /* Space between the rows */
     }
-    .margin0{
-        margin-top: 0px;
-    }
   </style>
   
 
-  <footer class="bg-gray-900 text-gray-400 py-8 text-center mt-10 margin0">
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center mt-10">
     <div class="flex justify-center space-x-6 mb-4">
       <a href="#" class="hover:text-white transition"><i class="fab fa-twitter text-2xl"></i></a>
       <a href="#" class="hover:text-white transition"><i class="fab fa-facebook-f text-2xl"></i></a>
@@ -169,5 +192,17 @@
     </div>
     <p class="text-sm">© 2025 MS RiskTec. All rights reserved.</p>
   </footer>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,de,zh-CN,ar,ru',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
+

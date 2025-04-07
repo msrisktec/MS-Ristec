@@ -43,23 +43,43 @@
     <div class="container mx-auto px-6 flex justify-between items-center">
       <div class="text-3xl font-bold">MS RiskTec</div>
       <nav class="space-x-6 text-lg">
-        <a class="hover:text-gray-300 transition" href="#">Home</a>
-        <a class="hover:text-gray-300 transition" href="#">Solutions</a>
-        <a class="hover:text-gray-300 transition" href="#">AI Tools</a>
-        <a class="hover:text-gray-300 transition" href="#">About Us</a>
-        <a class="hover:text-gray-300 transition" href="#">Contact</a>
+        <a class="hover:text-gray-300 transition" href="/index.html">Home</a>
+        <a class="hover:text-gray-300 transition" href="/solutions/">Solutions</a>
+        <a class="hover:text-gray-300 transition" href="/ai/">AI Tools</a>
+        <a class="hover:text-gray-300 transition" href="/training/">Training</a>
+        <a class="hover:text-gray-300 transition" href="/consultancy/">Consultancy</a>
+        <a class="hover:text-gray-300 transition" href="/research/">Research</a>
+        <a class="hover:text-gray-300 transition" href="/about/">About Us</a>
+        <a class="hover:text-gray-300 transition" href="/contact/">Contact</a>
       </nav>
+      <div class="flex justify-end px-6 pt-4">
+        <div id="google_translate_element"></div>
+      </div>
     </div>
   </header>
-
+  <style>
+    /* Google Translate Styling */
+    .goog-te-gadget-simple {
+      background: transparent !important; /* Override default white background */
+      border: 2px solid #ffffff !important; /* White border */
+      border-radius: 20px; /* Smaller pill shape */
+      padding: 2px 10px !important; /* Reduced height */
+      font-size: 20px !important; /* Smaller text */
+      height: 60px !important;
+    }
+    .goog-te-gadget {
+      height:36px !important;
+    }
+    #google_translate_element {
+      display: inline-block;
+    }
+  </style>
   <section class="gradient-bg text-white py-20 text-center fade-in">
-    <h1 class="text-6xl font-extrabold">AI-Powered Risk Solutions
+    <h1 class="text-6xl font-extrabold">Risk Training & Certifications
     </h1>
-    <p class="text-xl mt-4 max-w-2xl mx-auto">AI-Driven Risk Solutions for Future-Ready Organizations
-
-
+    <p class="text-xl mt-4 max-w-2xl mx-auto">AI-Powered Risk Management Training & Certification
     </p>
-    <h2 class="text-lg font-medium mt-4 text-white opacity-90">Identify, assess, and mitigate risks with our cutting-edge AI-powered risk management solutions tailored to your industry.
+    <h2 class="text-lg font-medium mt-4 text-white opacity-90">Empower your team with advanced risk management skills through AI-driven training programs, certification courses, and hands-on workshops.
     </h2>
     <div class="mt-6 flex justify-center gap-6"> <!-- Flex container for equal spacing -->
       <!-- Explore Our Tools Button -->
@@ -70,89 +90,64 @@
       <a class="bg-transparent text-white font-semibold py-4 px-8 rounded-full border-2 border-white mt-6 inline-block hover:scale-105 transition-transform" href="#dashboard">Go to Dashboard</a>
     </div>
   </section>
-
   <section class="py-20 bg-gray-100 text-center">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-12 text-gray-900">Our Risk Management Solutions</h2>
+      <h2 class="text-4xl font-bold mb-12 text-gray-900">Training Programs We Offer</h2>
   
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        
-        <!-- Enterprise Risk Management -->
-        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-blue-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">
-             Enterprise Risk Management
-          </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>Aligns with COSO ERM & ISO 31000</li>
-            <li>AI-driven risk mapping & compliance tracking</li>
-            <li>Real-time insights for proactive mitigation</li>
-          </ul>
-        </div>
-  
-        <!-- Cybersecurity Risk Management -->
-        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-red-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">
-           Cybersecurity Risk Management
-          </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>AI-powered threat detection & vulnerability assessments</li>
-            <li>Real-time security monitoring & cyber incident response</li>
-            <li>Compliance with NIST, GDPR, ISO 27001</li>
-          </ul>
-        </div>
-  
-        <!-- ESG & Sustainability Risk -->
+                <!-- Corporate Training for Enterprises -->
         <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-green-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">
-            ESG & Sustainability Risk
-          </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>AI-based ESG risk scoring aligned with TCFD, SASB & GRI</li>
-            <li>Supply chain sustainability & climate risk forecasting</li>
-            <li>Real-time compliance monitoring for ESG disclosures</li>
-          </ul>
-        </div>
-  
-        <!-- Financial Risk Management -->
-        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-purple-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">
-            Financial Risk Management
-          </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>AI-powered fraud detection & predictive credit risk analytics</li>
-            <li>Market volatility & liquidity risk assessment</li>
-            <li>Stress testing & AI-driven portfolio risk optimization</li>
-          </ul>
-        </div>
-  
-        <!-- Operational Risk Management -->
-        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-yellow-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
-          <h3 class="text-2xl font-bold text-gray-900 mb-3">
-             Operational Risk Management
-          </h3>
-          <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>AI-based early warning systems for supply chain risks</li>
-            <li>Real-time tracking for manufacturing & logistics</li>
-            <li>AI-driven automation for internal risk controls</li>
-          </ul>
-        </div>
-        
-        <!-- Compliance & Regulatory Risk Management -->
-        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-indigo-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
             <h3 class="text-2xl font-bold text-gray-900 mb-3">
-            Compliance & Regulatory Risk Management
+            Corporate Training for Enterprises
             </h3>
             <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
-            <li>AI-driven compliance tracking with automated audit trails</li>
-            <li>Regulatory risk assessments aligned with global standards</li>
-            <li>Real-time alerts for policy changes & regulatory updates</li>
+            <li>AI in Enterprise Risk Management (ERM)</li>
+            <li>AI for Cybersecurity Risk Management</li>
+            <li>ESG & Sustainability Risk Strategies</li>
+            <li>AI in Financial & Operational Risk Mitigation</li>
+            </ul>
+        </div>
+        
+        <!-- Risk Management Certification Programs -->
+        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-blue-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            Risk Management Certification Programs
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
+            <li>Industry-recognized certifications in AI-Powered Risk Management</li>
+            <li>Compliance & regulatory risk training (ISO 31000, COSO, GDPR, ESG)</li>
+            </ul>
+        </div>
+        
+        <!-- Workshops & Webinars -->
+        <div class="p-8 rounded-xl shadow-lg bg-gradient-to-br from-white to-gray-50 border-l-4 border-yellow-600 hover:shadow-xl transition-transform transform hover:-translate-y-2">
+            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+            Workshops & Webinars
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
+            <li>AI-driven cyber threat intelligence sessions</li>
+            <li>Advanced risk modeling for financial professionals</li>
             </ul>
         </div>
   
+  
       </div>
+  
+      <!-- Why Our Training is Unique -->
+      <div class="mt-16 p-8 rounded-xl shadow-lg bg-white border-l-4 border-purple-600 max-w-3xl mx-auto">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+           Why Our Training is Unique?
+        </h3>
+        <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
+          <li>AI-powered risk analytics training with real-world case studies</li>
+          <li>Hands-on learning with predictive modeling & risk simulation tools</li>
+          <li>Recognized certifications to enhance career prospects</li>
+        </ul>
+      </div>
+  
     </div>
   </section>
-
+  
   
   
   
@@ -225,5 +220,17 @@
     </div>
     <p class="text-sm">© 2025 MS RiskTec. All rights reserved.</p>
   </footer>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,de,zh-CN,ar,ru',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
